@@ -61,7 +61,7 @@ runs:
         git tag ${{ steps.gitversion.outputs.semVer }}
         git push origin ${{ steps.gitversion.outputs.semVer }}
     - name: Replace tokens
-      uses: cschleiden/replace-tokens@v1.2
+      uses: cschleiden/replace-tokens@v1.3
       with:
         files: parameters/${{ inputs.environment }}/${{ inputs.templateFile }}_${{ inputs.location }}.bicepparam
     - name: Copy template
